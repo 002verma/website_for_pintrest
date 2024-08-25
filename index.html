@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Affiliate Links Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            background: url('your-image.jpg') no-repeat center center/cover;
+            height: 60vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: black;
+            text-align: center;
+        }
+
+        .header video {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            opacity: 0.9;
+        }
+
+        .header h1 {
+            font-size: 3em;
+            z-index: 1;
+        }
+
+        .links-section {
+            padding: 50px;
+            text-align: center;
+        }
+
+        .links-section h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .affiliate-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .affiliate-link {
+            background: #f4f4f4;
+            margin: 10px;
+            padding: 20px;
+            width: 200px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease;
+        }
+
+        .affiliate-link:hover {
+            transform: translateY(-5px);
+        }
+
+        .affiliate-link img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .affiliate-link a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <div class="header">
+        <video autoplay muted loop>
+            <source src="https://cdn.pixabay.com/video/2023/11/03/187654-881022034_tiny.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <h1>Welcome to Spritual Verma</h1>
+    </div>
+
+    <!-- Links Section -->
+    <div class="links-section">
+        <h2>Check Out These Great Products!</h2>
+        <div class="affiliate-links">
+            <div class="affiliate-link">
+                <img src="product1.jpg" alt="Product 1">
+                <a href="your-affiliate-link-1">Product 1</a>
+            </div>
+            <div class="affiliate-link">
+                <img src="product2.jpg" alt="Product 2">
+                <a href="your-affiliate-link-2">Product 2</a>
+            </div>
+            <div class="affiliate-link">
+                <img src="product3.jpg" alt="Product 3">
+                <a href="your-affiliate-link-3">Product 3</a>
+            </div>
+            <!-- Add more affiliate links as needed -->
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <div class="footer">
+        <p>&copy; 2024 Your Website. All rights reserved.</p>
+    </div>
+
+</body>
+</html>
