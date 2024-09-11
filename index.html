@@ -13,13 +13,14 @@
 
         .header {
             background: url('your-image.jpg') no-repeat center center/cover;
-            height: 60vh;
+            height: 90vh;
             position: relative;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: black;
+            color: white;
             text-align: center;
+            box-sizing: border-box;
         }
 
         .header video {
@@ -61,6 +62,7 @@
             text-align: center;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             transition: transform 0.2s ease;
+            cursor: pointer; /* Make it look clickable */
         }
 
         .affiliate-link:hover {
@@ -80,7 +82,7 @@
 
         .footer {
             background: #333;
-            color: red;
+            color: white;
             text-align: center;
             padding: 20px 0;
             margin-top: 30px;
@@ -92,7 +94,7 @@
     <!-- Header Section -->
     <div class="header">
         <video autoplay muted loop>
-            <source src="https://cdn.pixabay.com/video/2023/11/03/187654-881022034_tiny.mp4" type="video/mp4">
+            <source src="https://cdn.pixabay.com/video/2023/11/03/187708-881035377_large.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
         <h1>Welcome to Spritual Verma</h1>
@@ -102,19 +104,30 @@
     <div class="links-section">
         <h2>Check Out These Great Products!</h2>
         <div class="affiliate-links">
-            <div class="affiliate-link">
-                <img src="product1.jpg" alt="Product 1">
-                <a href="your-affiliate-link-1">Product 1</a>
+            <div class="affiliate-link" onclick="window.location.href = this.querySelector('a').href;">
+                <img src="./images/Screenshot 2024-09-11 230744.jpg" alt="Product 1">
+                <a href="https://tinaaldea.com/draw-my-soulmate?&shield=92a41ch4r9453p1im9ij5y8tfs">Draw soulmate</a>
             </div>
-            <div class="affiliate-link">
-                <img src="product2.jpg" alt="Product 2">
-                <a href="your-affiliate-link-2">Product 2</a>
+            <div class="affiliate-link" onclick="window.location.href = this.querySelector('a').href;">
+                <img src="./images/main-qimg-f8afb8c9338ad543a206e143e9ac8bbe.jpg" alt="Product 2">
+                <a href="https://e0d24om3kiz34z0ul1vdmot42c.hop.clickbank.net">The wealth Signal</a>
             </div>
-            <div class="affiliate-link">
-                <img src="product3.jpg" alt="Product 3">
-                <a href="your-affiliate-link-3">Product 3</a>
+            <div class="affiliate-link" onclick="window.location.href = this.querySelector('a').href;">
+                <img src="./images/Screenshot 2024-09-11 230943.jpg" alt="Product 3">
+                <a href="https://19f40qq1n989zyfk2iojkjfqza.hop.clickbank.net">Soulmate Sketch</a>
             </div>
-            <!-- Add more affiliate links as needed -->
+            <div class="affiliate-link" onclick="window.location.href = this.querySelector('a').href;">
+                <img src="./images/Screenshot 2024-09-11 231015.jpg" alt="Product 3">
+                <a href="https://0afb9cmdw917xv35ilon252v3c.hop.clickbank.net">The Genius Wave</a>
+            </div>
+            <div class="affiliate-link" onclick="window.location.href = this.querySelector('a').href;">
+                <img src="./images/Screenshot 2024-09-11 231229.jpg" alt="Product 3">
+                <a href="https://ca8a1pibl980tt09oj-4jirh5p.hop.clickbank.net">His Secret Obsession</a>
+            </div>
+            <div class="affiliate-link" onclick="window.location.href = this.querySelector('a').href;">
+                <img src="./images/Screenshot 2024-09-11 231328.jpg" alt="Product 3">
+                <a href="https://f72d6imct77atn593sqdlqbn38.hop.clickbank.net">Divine Prayer</a>
+            </div>
         </div>
     </div>
 
