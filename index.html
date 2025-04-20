@@ -3,138 +3,335 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Affiliate Links Page</title>
+    <meta name="description" content="Discover the Spiritual Power of You.">
+    <meta name="keywords" content="Spiritual Guide , Yoga , Meditation, energy, manifestation, personal Growth, divine,karma">
+    <title>Find Your Spiritual Power</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        /* General Reset and Layout */
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        .header {
-            position: relative;
-            background: linear-gradient(to bottom, #6a11cb, #2575fc); /* Gradient background */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #F4F6F9;
+            color: #2C3E50;
+            text-align: center;
+            line-height: 1.6;
+        }
+
+        /* Header Section */
+        header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: url('./istockphoto-1644746219-2048x2048.jpg') no-repeat center center fixed;
+            background-size: cover;
             color: white;
+            text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            border-bottom: 5px solid #FFC107;
+            backdrop-filter: blur(8px);
+        }
+
+        header h1 {
+            font-size: 30px;
+            font-weight: bold;
+            background: rgba(0, 0, 0, 0.5);
+            letter-spacing: 1.2px;
+            margin-bottom: 15px;
+        }
+
+        .indication {
+            background: linear-gradient(135deg, #FFC107 0%, #FF9800 100%);
+            color: white;
+            font-size: 20px;
+            font-weight: 600;
+            padding: 15px 30px;
+            border-radius: 8px;
+            margin: 20px 0;
             text-align: center;
-            padding: 40px 20px;
+            max-width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 152, 0, 0.3);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: none;
         }
 
-        .header h1 {
-            margin: 0;
-            font-size: 2.5em;
-            z-index: 2;
-            position: relative;
+        .indication:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(255, 152, 0, 0.4);
+            background: linear-gradient(135deg, #FF9800 0%, #FFC107 100%);
         }
 
-        .header video {
-            margin-top: 20px;
-            width: 80%; /* Video size within the header */
-            max-width: 600px;
-            border-radius: 10px;
-            z-index: 1;
+        .subheader {
+            background: #0000008a;
+            font-size: 24px;
+            font-weight: 300;
+            color: #ECF0F1;
+            margin-bottom: 15px;
+            color: #ECF0F1;
+            margin-bottom: 15px;
         }
 
-        .header .video-credit {
-            font-size: 0.9em;
-            margin-top: 10px;
-            color: #ddd;
-            z-index: 2;
-            position: relative;
+        .subheader:hover {
+            background: rgba(0, 0, 0, 0.7);
+            transform: translateY(-1px);
         }
 
-        .links-section {
-            padding: 30px;
-            background-color: #f9f9f9;
+
+        .header-description {
+            font-size: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            color: #ECF0F1;
+            margin-bottom: 30px;
         }
 
-        .links-section h2 {
-            text-align: center;
-            margin-bottom: 20px;
-            font-size: 2em;
-            color: #333;
+        iframe {
+            width: 560px;
+            height: 315px;
+            max-width: 90%;
+            border-radius: 12px;
         }
 
-        .affiliate-links {
+        /* Product Section */
+        .products {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 20px;
+            padding: 50px 20px;
+            background-color: #F8F9FA;
+            gap: 30px;
         }
 
-        .affiliate-link {
-            background: #fff;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            width: 200px;
-            padding: 15px;
-            transition: transform 0.3s ease;
-            cursor: pointer;
+        .product-card {
+            display: flex
+;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 280px;
+    height: 320px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        .affiliate-link:hover {
+        .product-card:hover {
             transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
         }
 
-        .affiliate-link img {
+        .product-card img {
+            height : 40%;
             width: 100%;
-            border-radius: 8px;
-            margin-bottom: 10px;
+            border-radius: 22px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
         }
 
-        .affiliate-link a {
-            text-decoration: none;
+        .product-card img:hover {
+            transform: scale(1.05);
+        }
+
+        .product-card h3 {
+            font-size: 22px;
+            margin: 5px 0;
             color: #333;
+        }
+
+        .product-card p {
+            font-size: 16px;
+            color: #777;
+            margin-bottom: 12px;
+        }
+
+        .buy-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #28A745;
+            color: white;
+            font-size: 18px;
             font-weight: bold;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+
+        .buy-button:hover {
+            background: #218838;
+        }
+
+        .download-button {
+            display: inline-block;
+            padding: 15px 40px;
+            background: linear-gradient(to right, #4CAF50, #2E7D32);
+            color: white;
+            font-size: 18px;
+            font-weight: 600;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(46, 125, 50, 0.3);
+            position: relative;
+            overflow: hidden;
+            border: none;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .download-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(46, 125, 50, 0.4);
+            background: linear-gradient(to right, #2E7D32, #4CAF50);
+        }
+
+        h2 {
+            font-size: 28px;
+            margin: 20px 0px 0px 0px;
+            color: #333;
+        }
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .product-card {
+                width: 100%;
+                margin-bottom: 20px;
+                padding: 15px;
+            }
         }
     </style>
 </head>
 <body>
+    <header>
+        <h1>Transform Yourself Welcome to Spiritual Verma</h1>
+        <div class="indication">
+            Free Resource at Bottom
+        </div>
 
-    <!-- Upper Section -->
-    <div class="header">
-        <h1>Welcome to Spiritual Verma</h1>
-        <!-- Updated Video Element -->
-  <video id="promo-video" autoplay muted controls preload="metadata" loading="lazy" poster="./stained-glass-1181864_1280.jpg">
-    <source src="./MANIFEST ANYTHING _ 5 Minute Daily Reprogramming Meditation _  You Will See Results Within 24 Hours - Mary Kate (720p, h264, youtube).mp4" type="video/mp4">
-    Your browser does not support the video tag.
-</video>
-        <p class="video-credit">
-            Credit: <a href="https://www.youtube.com/c/MaryKateManifesting" target="_blank" style="color: #fff; text-decoration: underline;">Mary Kate Manifesting</a>
-        </p>
-    </div>
+        <p class="subheader">Discover a healthier, fitter, and more energetic version of yourself with our expert keto guidance.</p>
+        <div class="video-container">
+            <iframe width="560" height="315" src="./MANIFEST ANYTHING _ 5 Minute Daily Reprogramming Meditation _  You Will See Results Within 24 Hours - Mary Kate (720p, h264, youtube).mp4" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </header>
 
-    <!-- Lower Section -->
-    <div class="links-section">
-        <h2>Discover Hidden Treasures!</h2>
-        <div class="affiliate-links">
-            <div class="affiliate-link" onclick="window.location.href = this.querySelector('a').href;">
-                <img src="./images/Screenshot 2024-09-11 230744.jpg" alt="Product 1">
-                <a href="https://tinaaldea.com/draw-my-soulmate?&shield=92a41ch4r9453p1im9ij5y8tfs">Draw soulmate</a>
+
+    <h2>Premium Products for Premium Peoples</h2>
+    
+    <section class="products" id="products">
+       
+
+        <div class="product-card">
+            <img src=""./images/Screenshot 2024-09-11 230744.jpg" alt="product1">
+            <h3>Draw Soulmate</h3>
+            <p>Who will be your Soulmate check here</p>
+            <a href="https://tinaaldea.com/draw-my-soulmate?&shield=92a41ch4r9453p1im9ij5y8tfs" class="buy-button">Try Now</a>
+        </div>
+        <div class="product-card">
+            <img src=./images/main-qimg-f8afb8c9338ad543a206e143e9ac8bbe.jpg" alt="Product 2">
+            <h3>The Wealth Signal</h3>
+            <p>Are you attracting Wealth</p>
+            <a href="https://e0d24om3kiz34z0ul1vdmot42c.hop.clickbank.net" class="buy-button">Try Now</a>
+        </div>
+        <div class="product-card">
+            <img src=./images/Screenshot 2024-09-11 230943.jpg" alt="Product 3">
+            <h3>Soulmate Sketch</h3>
+            <p>Wanted to know who is made for you</p>
+            <a href="https://19f40qq1n989zyfk2iojkjfqza.hop.clickbank.net" class="buy-button">Try Now</a>
+        </div>
+        <div class="product-card">
+            <img src="./images/Screenshot 2024-09-11 231015.jpg" alt="Product 4">
+            <h3>The Genius Wave</h3>
+            <p>Unlock your Genius wave today</p>
+            <a href="https://0afb9cmdw917xv35ilon252v3c.hop.clickbank.net" class="buy-button">Try Now</a>
+        </div>
+        <div class="product-card">
+            <img src="./images/Screenshot 2024-09-11 231229.jpg" alt="Product 5">
+            <h3>His Secret Obsession</h3>
+            <p>Wanted to know his Secrets</p>
+            <a href="https://ca8a1pibl980tt09oj-4jirh5p.hop.clickbank.net" class="buy-button">Try Now</a>
+        </div>
+        <div class="product-card">
+            <img src="./images/Screenshot 2024-09-11 231328.jpg" alt="Product 6">
+            <h3>Divine Prayer</h3>
+            <p>Unlock the most crucial Divine Prayer.</p>
+            <a href="https://f72d6imct77atn593sqdlqbn38.hop.clickbank.net" class="buy-button">Try Now</a>
+        </div>
+
+    </section>
+
+    <!-- Free Keto Resources Section -->
+    <section class="resources">
+        <h2>Free Spritiual Resources</h2>
+        <div class="resource-simple">
+            <div class="resource-item">
+                <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8a2V0byUyMGZvb2R8ZW58MHx8MHx8fDA%3D" alt="Keto Food">
+                <a href="./ketogenic-diet-food-list.pdf" target="_blank" class="small-btn">Free Beginner Spiritual Guide</a>
             </div>
-            <div class="affiliate-link" onclick="window.location.href = this.querySelector('a').href;">
-                <img src="./images/main-qimg-f8afb8c9338ad543a206e143e9ac8bbe.jpg" alt="Product 2">
-                <a href="https://e0d24om3kiz34z0ul1vdmot42c.hop.clickbank.net">The wealth Signal</a>
+            <div class="resource-item">
+                <img src="https://images.unsplash.com/photo-1606787366850-de6330128bfc?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bWVhbCUyMHByZXB8ZW58MHx8MHx8fDA%3D" alt="Meal Prep">
+                <a href="./ultimate-guide-to-keto.pdf.pdf" target="_blank" class="small-btn">Free Beginners Meditation Guide</a>
             </div>
-            <div class="affiliate-link" onclick="window.location.href = this.querySelector('a').href;">
-                <img src="./images/Screenshot 2024-09-11 230943.jpg" alt="Product 3">
-                <a href="https://19f40qq1n989zyfk2iojkjfqza.hop.clickbank.net">Soulmate Sketch</a>
+            <div class="resource-item">
+                <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8aGVhbHRoeSUyMGZvb2R8ZW58MHx8MHx8fDA%3D" alt="Keto Guide">
+                <a href="./UK-KetoVie-Recipe-Book-For-Classical-Diets.pdf.pdf" target="_blank" class="small-btn">Free meditation workbook</a>
             </div>
-            <div class="affiliate-link" onclick="window.location.href = this.querySelector('a').href;">
-                <img src="./images/Screenshot 2024-09-11 231015.jpg" alt="Product 4">
-                <a href="https://0afb9cmdw917xv35ilon252v3c.hop.clickbank.net">The Genius Wave</a>
-            </div>
-            <div class="affiliate-link" onclick="window.location.href = this.querySelector('a').href;">
-                <img src="./images/Screenshot 2024-09-11 231229.jpg" alt="Product 5">
-                <a href="https://ca8a1pibl980tt09oj-4jirh5p.hop.clickbank.net">His Secret Obsession</a>
-            </div>
-            <div class="affiliate-link" onclick="window.location.href = this.querySelector('a').href;">
-                <img src="./images/Screenshot 2024-09-11 231328.jpg" alt="Product 6">
-                <a href="https://f72d6imct77atn593sqdlqbn38.hop.clickbank.net">Divine Prayer</a>
+            <div class="resource-item">
+                <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8aGVhbHRoeSUyMGZvb2R8ZW58MHx8MHx8fDA%3D" alt="Keto Guide">
+                <a href="./Low%20carb%20diet%20plan%20vegetarian.pdf" target="_blank" class="small-btn">Free yoga guide</a>
             </div>
         </div>
-    </div>
+        
+    </section>
+
+    <style>
+        .resources {
+            padding: 20px;
+            text-align: center;
+        }
+        .resource-simple {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .resource-item {
+            width: 200px;
+            text-align: center;
+        }
+        .resource-item img {
+            width: 100%;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 8px;
+        }
+        .small-btn {
+            display: inline-block;
+            padding: 6px 12px;
+            background: #4CAF50;
+            color: white;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 13px;
+        }
+        .small-btn:hover {
+            background: #3e8e41;
+        }
+    </style>
+
 
 </body>
 </html>
+
